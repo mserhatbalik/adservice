@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'adservice.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
